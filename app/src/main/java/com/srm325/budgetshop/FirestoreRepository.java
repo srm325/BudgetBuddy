@@ -23,6 +23,7 @@ public class FirestoreRepository {
     final CollectionReference sessionsRef = db.collection("sessions");
     public static final String ENTRIES = "entries";
     public static final String CATEGORY_NAME_FIELD = "categoryName";
+    CollectionReference dateRef = db.collection("categories").document(CATEGORY_NAME_FIELD).collection("entries");
     public static final String IS_EXPENSE_FIELD = "expense";
     public static final String ENTRY_DATE_FIELD = "entryDate";
 

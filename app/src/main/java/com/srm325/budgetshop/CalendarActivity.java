@@ -28,42 +28,11 @@ public class CalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
         firestoreRepository = new FirestoreRepository();
-        recyclerView = findViewById(R.id.calendar_recyclerview);
         //initializes the calendarview
         initializeCalendar();
     }
-    private void setupRecyclerview() {
-        Query query = firestoreRepository.categoriesRef
-                .document(categoryName)
-                .collection(FirestoreRepository.ENTRIES)
-                .orderBy(FirestoreRepository.ENTRY_DATE_FIELD, Query.Direction.DESCENDING);
 
 
-        FirestoreRecyclerOptions<Entry> options = new FirestoreRecyclerOptions.Builder<Entry>()
-                .setQuery(query, Entry.class)
-                .build();
-
-        adapter = new EntriesAdapter(options);
-
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        LinearLayoutManager verticalLayout = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(verticalLayout);
-        recyclerView.setAdapter(adapter);
-
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        adapter.startListening();
-    }
     public void initializeCalendar() {
         calendar = (CalendarView) findViewById(R.id.calendar);
 
@@ -91,9 +60,22 @@ public class CalendarActivity extends AppCompatActivity {
             //show the selected date as a toast
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
-                Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
-                setupRecyclerview();
-                recyclerView.setVisibility(View.VISIBLE);
+                int months = month + 1;
+                Toast.makeText(getApplicationContext(), day + "/" + months + "/" + year, Toast.LENGTH_LONG).show();
+                Intent i = new Intent(CalendarActivity.this, CalendarPopUpActivity.class);
+                //Create the bundle
+                Bundle bundle = new Bundle();
+                String dateString = day + "/" + months + "/" + year;
+                //Add your data to bundle
+                bundle.putString("stuff", dateString);
+                bundle.putInt("day", day);
+                bundle.putInt("month", months);
+                bundle.putInt("day", year);
+                //Add the bundle to the intent
+                i.putExtras(bundle);
+                //Fire that second activity
+                startActivity(i);
+
             }
         });
     }

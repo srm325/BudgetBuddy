@@ -51,6 +51,11 @@
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".CalendarPopUpActivity"
+            android:configChanges="orientation"
+            android:theme="@style/AppTheme.CalendarPopUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".AddEntryActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
