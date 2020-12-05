@@ -79,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.calendar_action_mainact:
                 startActivity(new Intent(MainActivity.this, CalendarActivity.class));
                 return true;
+            case R.id.quiz_action_mainact:
+                startActivity(new Intent(MainActivity.this, QuizActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

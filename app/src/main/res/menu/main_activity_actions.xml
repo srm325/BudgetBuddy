@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/quiz_action_mainact"
+        android:icon="@drawable/ic_learning"
+        android:title="@string/add_action"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/calendar_action_mainact"
         android:icon="@drawable/ic_calendar"
         android:title="@string/calendar_action"
@@ -11,4 +16,5 @@
         android:icon="@drawable/ic_plus"
         android:title="@string/add_action"
         app:showAsAction="always" />
+
 </menu>

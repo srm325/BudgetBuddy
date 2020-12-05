@@ -11,24 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.BudgetShop">
-        <activity android:name=".CalendarActivity"
+        <activity android:name=".QuizActivity"></activity>
+        <activity
+            android:name=".CalendarActivity"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".DisplayEntriesActivity"
             android:configChanges="orientation"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".DisplayEntriesActivityCalendar"
             android:configChanges="orientation"
             android:parentActivityName=".CalendarPopUpActivity"
-            android:theme="@style/AppTheme.CalendarPopUpActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CalendarPopUpActivity"></activity>
         <activity
             android:name=".SearchItemActivity"
             android:configChanges="orientation"
@@ -60,8 +58,8 @@
         <activity
             android:name=".CalendarPopUpActivity"
             android:configChanges="orientation"
-            android:theme="@style/AppTheme.CalendarPopUpActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CalendarPopUpActivity" />
         <activity
             android:name=".AddEntryActivity"
             android:configChanges="orientation"
