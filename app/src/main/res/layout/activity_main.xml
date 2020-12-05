@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textSize="10sp"
-        android:text="Nov 1 - Nov 30"
+        android:text="Dec 1 - Dec 31"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

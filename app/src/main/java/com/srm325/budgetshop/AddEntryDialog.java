@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class AddEntryDialog extends AppCompatDialogFragment {
     TextView addIncome;
+    TextView addExpense;
 
     @NonNull
     @Override
@@ -26,8 +27,13 @@ public class AddEntryDialog extends AppCompatDialogFragment {
         View view = inflater.inflate(R.layout.add_entry_dialog, null);
         builder.setView(view);
 
+        addExpense = view.findViewById(R.id.addExpenseTextView);
         addIncome = view.findViewById(R.id.addIncomeTextView);
-
+        //go to choose expense category activity
+        addExpense.setOnClickListener(view1 -> {
+            startActivity(new Intent(getContext(), ExpenseCategoryActivity.class));
+            dismiss();
+        });
 
         //go to choose income category activity
         addIncome.setOnClickListener(view2 -> {

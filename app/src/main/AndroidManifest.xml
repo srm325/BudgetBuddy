@@ -6,17 +6,22 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_logo"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.BudgetShop">
-        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".CalendarActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
         <activity
             android:name=".DisplayEntriesActivity"
             android:configChanges="orientation"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+        </activity>
         <activity
             android:name=".SearchItemActivity"
             android:configChanges="orientation"
@@ -52,7 +57,13 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
