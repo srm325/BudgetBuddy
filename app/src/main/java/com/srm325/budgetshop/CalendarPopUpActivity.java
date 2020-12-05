@@ -80,13 +80,13 @@ public class CalendarPopUpActivity extends AppCompatActivity {
         Fragment selected = null;
         switch(view.getId()){
             case R.id.expense_tabbutton:
-                selected = new ExpenseFragment();
+                selected = new ExpenseFragmentCalendar();
                 view.setBackground(getResources().getDrawable(R.drawable.tab_line));
                 incomeButton.setBackground(getResources().getDrawable(android.R.color.transparent));
                 getCategoriesListThenSetupRingChart(true);
                 break;
             case R.id.income_tabbutton:
-                selected = new IncomeFragment();
+                selected = new IncomeFragmentCalendar();
                 view.setBackground(getResources().getDrawable(R.drawable.tab_line));
                 expenseButton.setBackground(getResources().getDrawable(android.R.color.transparent));
                 getCategoriesListThenSetupRingChart(false);
