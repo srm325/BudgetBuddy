@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 AddEntryDialog dialog = new AddEntryDialog();
                 dialog.show(getSupportFragmentManager(), "Add Entry Dialog");
                 return true;
-                //todo: open shopping session activity
-            case R.id.shopping_session_action_mainact:
-                startActivity(new Intent(MainActivity.this, ShoppingSessionActivity.class));
+                //todo: open calendar activity
+            case R.id.calendar_action_mainact:
+                startActivity(new Intent(MainActivity.this, CalendarActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -2,11 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/shopping_session_action_mainact"
-        android:icon="@drawable/ic_cart"
-        android:title="@string/shopping_session_action"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/calendar_action_mainact"
         android:icon="@drawable/ic_calendar"
         android:title="@string/calendar_action"

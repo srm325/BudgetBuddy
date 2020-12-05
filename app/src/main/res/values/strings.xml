@@ -45,4 +45,8 @@
     <string name="items">Items</string>
     <string name="search_an_item">Search an Item</string>
     <string name="calendar_action">Calendar Action</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

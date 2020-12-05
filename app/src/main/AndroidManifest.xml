@@ -7,51 +7,52 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_logo"
-        android:roundIcon="@mipmap/ic_launcher_logo"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.BudgetShop">
-        <activity android:name="com.srm325.budgetshop.DisplayEntriesActivity"
-            android:parentActivityName="com.srm325.budgetshop.MainActivity"
+        <activity android:name=".CalendarActivity"></activity>
+        <activity
+            android:name=".DisplayEntriesActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name="com.srm325.budgetshop.SearchItemActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SearchItemActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.ScanBarcodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScanBarcodeActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.ShoppingSessionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShoppingSessionActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.ShoppingSessionsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShoppingSessionsListActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.AddCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddCategoryActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.IncomeCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IncomeCategoryActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.ExpenseCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ExpenseCategoryActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.AddEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddEntryActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.srm325.budgetshop.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
