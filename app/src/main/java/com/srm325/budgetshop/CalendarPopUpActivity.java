@@ -110,8 +110,7 @@ public class CalendarPopUpActivity extends AppCompatActivity {
         int year = years+1;
         String startdate = years + "-" + month +"-" + day;
         String enddate = year + "-" + month +"-" + day;
-        Date start = new Date(startdate);
-        Date end = new Date(enddate);
+
         Query categoriesQuery;
         if (isExpense) {
             categoriesQuery = firestoreRepository
