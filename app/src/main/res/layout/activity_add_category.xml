@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/blue"
+    android:layout_height="match_parent"
+    tools:context=".AddCategoryActivity">
+
+    <TextView
+        android:id="@+id/add_category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:text="Add Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ac_choose_category_container"
+        style="@style/composite_input_container"
+        android:layout_width="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_category_title"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".85">
+
+        <ImageView
+            android:id="@+id/ac_choose_category_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_tag" />
+
+        <TextView
+            android:id="@+id/ac_choose_category_description"
+            style="@style/composite_input_description"
+            app:layout_constraintLeft_toRightOf="@+id/ac_choose_category_icon"
+            android:text="Category" />
+
+        <Button
+            android:id="@+id/choose_category_addact"
+            style="@style/composite_input_value"
+            app:layout_constraintTop_toBottomOf="@+id/ac_choose_category_description"
+            app:layout_constraintLeft_toLeftOf="@+id/ac_choose_category_description"
+            android:text="Select a Category" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ac_amount_container"
+        style="@style/composite_input_container"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ac_choose_category_container"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".85">
+
+        <ImageView
+            android:id="@+id/ac_amount_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_cash" />
+
+        <TextView
+            android:id="@+id/ac_amount_description"
+            style="@style/composite_input_description"
+            app:layout_constraintLeft_toRightOf="@+id/ac_amount_icon"
+            android:text="Budget Amount" />
+
+        <EditText
+            android:id="@+id/category_budget_amount"
+            style="@style/composite_input_value"
+            android:text="Budget Amount"
+            app:layout_constraintTop_toBottomOf="@id/ac_amount_description"
+            app:layout_constraintLeft_toLeftOf="@id/ac_amount_description"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/add_category_save_button"
+        android:layout_width="wrap_content"
+        android:background="@drawable/blue_box_background"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainact_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="10sp"
+        android:text="Nov 1 - Nov 30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_graph_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/blue_box_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintWidth_percent=".9">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/ring_chart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".9"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/balance_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="$0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/expense_tabbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/expenses"
+        android:textSize="23sp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="true"
+        android:onClick="SwitchFragments"
+        app:layout_constraintStart_toStartOf="@+id/main_graph_bg"
+        app:layout_constraintTop_toBottomOf="@+id/main_graph_bg" />
+
+    <Button
+        android:id="@+id/income_tabbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/income"
+        android:textSize="20sp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="true"
+        android:onClick="SwitchFragments"
+        app:layout_constraintEnd_toEndOf="@+id/main_graph_bg"
+        app:layout_constraintTop_toBottomOf="@+id/main_graph_bg" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expense_tabbutton"
+        app:layout_constraintWidth_percent=".9">
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_info_container"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        android:background="@drawable/purple_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9" >
+
+        <TextView
+            android:id="@+id/net_income_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:textSize="12sp"
+            android:text="@string/net_income"
+            app:layout_constraintBottom_toTopOf="@+id/net_income"
+            app:layout_constraintRight_toLeftOf="@+id/expenditure_label"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/net_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/net_income_label"
+            app:layout_constraintTop_toBottomOf="@+id/net_income_label" />
+        <TextView
+            android:id="@+id/expenditure_label"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@+id/net_income_label"
+            app:layout_constraintRight_toLeftOf="@+id/budgeted_label"
+            app:layout_constraintBottom_toTopOf="@+id/expenditure"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Expenditure" />
+        <TextView
+            android:id="@+id/expenditure"
+            app:layout_constraintTop_toBottomOf="@+id/expenditure_label"
+            app:layout_constraintStart_toStartOf="@+id/expenditure_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0" />
+        <TextView
+            android:id="@+id/budgeted_label"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/expenditure_label"
+            app:layout_constraintRight_toLeftOf="@+id/balance_label"
+            app:layout_constraintBottom_toTopOf="@+id/budgeted"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Budgeted"/>
+        <TextView
+            android:id="@+id/budgeted"
+            app:layout_constraintTop_toBottomOf="@+id/budgeted_label"
+            app:layout_constraintStart_toStartOf="@+id/budgeted_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0" />
+        <TextView
+            android:id="@+id/balance_label"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/budgeted_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/balance"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balance" />
+        <TextView
+            android:id="@+id/balance"
+            app:layout_constraintTop_toBottomOf="@+id/balance_label"
+            app:layout_constraintStart_toStartOf="@+id/balance_label"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

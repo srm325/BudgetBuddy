@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/blue"
+    android:layout_height="match_parent"
+    tools:context=".AddEntryActivity">
+
+    <TextView
+        android:id="@+id/add_entry_title"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Add Entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/choose_category_container"
+        style="@style/composite_input_container"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_entry_title"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".85">
+
+        <ImageView
+            android:id="@+id/choose_category_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_tag" />
+
+        <TextView
+            android:id="@+id/choose_category_description"
+            style="@style/composite_input_description"
+            app:layout_constraintLeft_toRightOf="@+id/choose_category_icon"
+            android:text="Category"/>
+
+        <TextView
+            android:id="@+id/choose_category"
+            android:layout_height="wrap_content"
+            android:text="Choose Category"
+            app:layout_constraintLeft_toLeftOf="@+id/choose_category_description"
+            app:layout_constraintTop_toBottomOf="@+id/choose_category_description"
+            style="@style/composite_input_value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/description_container"
+        style="@style/composite_input_container"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".85"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_category_container">
+
+        <ImageView
+            android:id="@+id/description_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_basket" />
+
+        <TextView
+            android:id="@+id/description_description"
+            style="@style/composite_input_description"
+            android:text="Description"
+            app:layout_constraintLeft_toRightOf="@+id/description_icon" />
+
+        <EditText
+            android:id="@+id/entry_description"
+            style="@style/composite_input_value"
+            android:hint="Name your entry"
+            app:layout_constraintLeft_toLeftOf="@id/description_description"
+            app:layout_constraintTop_toBottomOf="@+id/description_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/amount_container"
+        style="@style/composite_input_container"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_container"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".85">
+
+        <ImageView
+            android:id="@+id/amount_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_cash" />
+
+        <TextView
+            android:id="@+id/amount_description"
+            style="@style/composite_input_description"
+            android:text="Amount"
+            app:layout_constraintLeft_toRightOf="@+id/amount_icon" />
+
+        <EditText
+            android:id="@+id/entry_amount"
+            style="@style/composite_input_value"
+            android:hint="Enter Value"
+            android:inputType="numberDecimal"
+            app:layout_constraintLeft_toLeftOf="@+id/amount_description"
+            app:layout_constraintTop_toBottomOf="@+id/amount_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/date_container"
+        style="@style/composite_input_container"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_container"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".85">
+
+        <ImageView
+            android:id="@+id/date_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/date_description"
+            style="@style/composite_input_description"
+            app:layout_constraintLeft_toRightOf="@+id/date_icon"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/entry_date"
+            android:text="--/--/----"
+            app:layout_constraintTop_toBottomOf="@+id/date_description"
+            app:layout_constraintLeft_toLeftOf="@id/date_description"
+            style="@style/composite_input_value"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/entry_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_box_background"
+        android:text="Save"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

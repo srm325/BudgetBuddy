@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/pick_location_title"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_a_location"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/zipcode_container"
+        style="@style/composite_input_container"
+        android:layout_width="150dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pick_location_title" >
+
+        <ImageView
+            android:id="@+id/zipcode_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_map_marker" />
+
+        <TextView
+            android:id="@+id/zipcode_description"
+            style="@style/composite_input_description"
+            app:layout_constraintLeft_toRightOf="@id/zipcode_icon"
+            android:text="ZipCode" />
+
+        <EditText
+            android:id="@+id/pick_store_zipcode"
+            style="@style/composite_input_value"
+            app:layout_constraintTop_toBottomOf="@id/zipcode_description"
+            app:layout_constraintLeft_toLeftOf="@id/zipcode_description"
+            android:hint="00000" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pick_store_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zipcode_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>

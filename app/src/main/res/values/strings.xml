@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">BudgetShop</string>
+
+    <string name="scan">Scan</string>
+
+    <string name="shopping_session_action">Shopping Session Action</string>
+    <string name="add_action">Add Action</string>
+    <string name="expenses">Expenses</string>
+    <string name="income">Income</string>
+    <string name="net_income">Net Income</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Expense Category Labels  -->
+    <string name="auto_category_label">Auto</string>
+    <string name="beauty_category_label">Beauty</string>
+    <string name="clothing_category_label">Clothing</string>
+    <string name="entertainment_category_label">Entertainment</string>
+    <string name="financial_category_label">Financial</string>
+    <string name="general_category_label">General</string>
+    <string name="groceries_category_label">Groceries</string>
+    <string name="home_category_label">Home</string>
+    <string name="industry_category_label">Industry</string>
+    <string name="learning_category_label">Learning</string>
+    <string name="medical_category_label">Medical</string>
+    <string name="nightlife_category_label">Nightlife</string>
+    <string name="restaurants_category_label">Restaurants</string>
+    <string name="services_category_label">Services</string>
+    <string name="shop_category_label">Shop</string>
+    <string name="spiritual_category_label">Spiritual</string>
+    <string name="sports_category_label">Sports</string>
+    <string name="transport_category_label">Transport</string>
+    <string name="travel_category_label">Travel</string>
+    <string name="choose_income_category">Choose Income Category</string>
+
+    <!--  Income Category Labels  -->
+    <string name="paycheck_category_label">Paycheck</string>
+    <string name="gift_category_label">Gift</string>
+    <string name="interest_category_label">Interest</string>
+    <string name="other_category_label">Other</string>
+    <string name="shopping_sessions">Shopping Sessions</string>
+    <string name="pick_a_store">Pick a Store</string>
+    <string name="pick_a_location">Pick a Location</string>
+    <string name="total">Total</string>
+    <string name="items">Items</string>
+    <string name="search_an_item">Search an Item</string>
+    <string name="calendar_action">Calendar Action</string>
+</resources>

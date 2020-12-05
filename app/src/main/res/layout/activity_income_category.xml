@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".IncomeCategoryActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/income_category_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_income_category" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/income_category_icons_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/paycheck_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/paycheck_category_label"
+            android:onClick="onIncomeCategoryClick"
+            android:background="@drawable/ic_paycheck_category"
+            app:layout_constraintRight_toLeftOf="@id/gift_category"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/gift_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onIncomeCategoryClick"
+            android:contentDescription="@string/gift_category_label"
+            android:background="@drawable/ic_gift_category"
+            app:layout_constraintRight_toLeftOf="@id/interest_category"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/paycheck_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/interest_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onIncomeCategoryClick"
+            android:contentDescription="@string/interest_category_label"
+            android:background="@drawable/ic_interest_category"
+            app:layout_constraintRight_toLeftOf="@id/other_category"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/gift_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/other_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onIncomeCategoryClick"
+            android:contentDescription="@string/other_category_label"
+            android:background="@drawable/ic_other_category"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/interest_category"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+
+
+        <TextView
+            android:id="@+id/paycheck_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paycheck_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/paycheck_category"
+            app:layout_constraintStart_toStartOf="@+id/paycheck_category"
+            app:layout_constraintTop_toBottomOf="@+id/paycheck_category" />
+
+        <TextView
+            android:id="@+id/gift_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gift_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/gift_category"
+            app:layout_constraintStart_toStartOf="@+id/gift_category"
+            app:layout_constraintTop_toBottomOf="@+id/gift_category" />
+
+        <TextView
+            android:id="@+id/interest_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interest_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/interest_category"
+            app:layout_constraintStart_toStartOf="@+id/interest_category"
+            app:layout_constraintTop_toBottomOf="@+id/interest_category" />
+
+        <TextView
+            android:id="@+id/other_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/other_category"
+            app:layout_constraintStart_toStartOf="@+id/other_category"
+            app:layout_constraintTop_toBottomOf="@+id/other_category" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

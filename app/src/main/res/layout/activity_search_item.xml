@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchItemActivity">
+
+    <TextView
+        android:id="@+id/search_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/search_an_item"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_container"
+        style="@style/composite_input_container"
+        android:layout_width="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_item_title"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".85">
+
+        <ImageView
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:id="@+id/search_icon"
+            style="@style/composite_input_icon"
+            android:src="@drawable/ic_magnify" />
+
+        <TextView
+            android:id="@+id/search_description"
+            style="@style/composite_input_description"
+            android:text="Search"
+            app:layout_constraintLeft_toRightOf="@id/search_icon" />
+
+        <EditText
+            android:id="@+id/item_search_bar"
+            style="@style/composite_input_value"
+            android:hint="Search for an item"
+            app:layout_constraintLeft_toLeftOf="@id/search_description"
+            app:layout_constraintTop_toBottomOf="@id/search_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_item_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>

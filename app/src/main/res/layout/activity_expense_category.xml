@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".ExpenseCategoryActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/expense_category_title"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="Choose Expense Category" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expense_category_icons_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/auto_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_auto_category"
+            android:contentDescription="@string/auto_category_label"
+            android:onClick="onExpenseCategoryClick"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/beauty_category"
+            app:layout_constraintBottom_toTopOf="@+id/financial_category"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15" />
+        <Button
+            android:id="@+id/beauty_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_beauty_category"
+            android:onClick="onExpenseCategoryClick"
+            android:contentDescription="@string/beauty_category_label"
+            app:layout_constraintLeft_toRightOf="@+id/auto_category"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/clothing_category"
+            app:layout_constraintBottom_toTopOf="@+id/general_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/clothing_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_clothing_category"
+            android:onClick="onExpenseCategoryClick"
+            android:contentDescription="@string/clothing_category_label"
+            app:layout_constraintBottom_toTopOf="@id/groceries_category"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/beauty_category"
+            app:layout_constraintRight_toLeftOf="@+id/entertainment_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/entertainment_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:contentDescription="@string/entertainment_category_label"
+            android:background="@drawable/ic_entertainment_category"
+            app:layout_constraintBottom_toTopOf="@id/home_category"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/clothing_category"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/financial_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_financial_category"
+            android:contentDescription="@string/financial_category_label"
+            app:layout_constraintBottom_toTopOf="@id/industry_category"
+            app:layout_constraintTop_toBottomOf="@+id/auto_category"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/general_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/general_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_general_category"
+            android:contentDescription="@string/general_category_label"
+            app:layout_constraintBottom_toTopOf="@id/learning_category"
+            app:layout_constraintRight_toLeftOf="@+id/groceries_category"
+            app:layout_constraintTop_toBottomOf="@+id/beauty_category"
+            app:layout_constraintLeft_toRightOf="@+id/financial_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/groceries_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_groceries_category"
+            android:contentDescription="@string/groceries_category_label"
+            app:layout_constraintBottom_toTopOf="@id/medical_category"
+            app:layout_constraintTop_toBottomOf="@+id/clothing_category"
+            app:layout_constraintLeft_toRightOf="@+id/general_category"
+            app:layout_constraintRight_toLeftOf="@id/home_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/home_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_home_category"
+            android:contentDescription="@string/home_category_label"
+            app:layout_constraintBottom_toTopOf="@id/nightlife_category"
+            app:layout_constraintTop_toBottomOf="@id/entertainment_category"
+            app:layout_constraintLeft_toRightOf="@id/groceries_category"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/industry_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_industry_category"
+            android:contentDescription="@string/industry_category_label"
+            app:layout_constraintBottom_toTopOf="@id/restaurants_category"
+            app:layout_constraintRight_toLeftOf="@id/learning_category"
+            app:layout_constraintTop_toBottomOf="@id/financial_category"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/learning_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_learning_category"
+            android:contentDescription="@string/learning_category_label"
+            app:layout_constraintBottom_toTopOf="@id/services_category"
+            app:layout_constraintRight_toLeftOf="@id/medical_category"
+            app:layout_constraintTop_toBottomOf="@id/general_category"
+            app:layout_constraintLeft_toRightOf="@id/industry_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/medical_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_medical_category"
+            android:contentDescription="@string/medical_category_label"
+            app:layout_constraintBottom_toTopOf="@id/shop_category"
+            app:layout_constraintTop_toBottomOf="@id/groceries_category"
+            app:layout_constraintLeft_toRightOf="@id/learning_category"
+            app:layout_constraintRight_toLeftOf="@id/nightlife_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/nightlife_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_nightlife_category"
+            android:contentDescription="@string/nightlife_category_label"
+            app:layout_constraintBottom_toTopOf="@id/spiritual_category"
+            app:layout_constraintTop_toBottomOf="@id/home_category"
+            app:layout_constraintLeft_toRightOf="@id/medical_category"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/restaurants_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:contentDescription="@string/restaurants_category_label"
+            android:background="@drawable/ic_restaurants_category"
+            app:layout_constraintRight_toLeftOf="@id/services_category"
+            app:layout_constraintBottom_toTopOf="@id/sports_category"
+            app:layout_constraintTop_toBottomOf="@id/industry_category"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/services_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_services_category"
+            android:contentDescription="@string/services_category_label"
+            app:layout_constraintRight_toLeftOf="@id/shop_category"
+            app:layout_constraintBottom_toTopOf="@id/transport_category"
+            app:layout_constraintTop_toBottomOf="@id/learning_category"
+            app:layout_constraintLeft_toRightOf="@id/restaurants_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/shop_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_shop_category"
+            android:contentDescription="@string/shop_category_label"
+            app:layout_constraintRight_toLeftOf="@id/spiritual_category"
+            app:layout_constraintBottom_toTopOf="@id/travel_category"
+            app:layout_constraintTop_toBottomOf="@id/medical_category"
+            app:layout_constraintLeft_toRightOf="@id/services_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/spiritual_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_spiritual_category"
+            android:contentDescription="@string/spiritual_category_label"
+            app:layout_constraintBottom_toTopOf="@id/travel_category"
+            app:layout_constraintTop_toBottomOf="@id/nightlife_category"
+            app:layout_constraintLeft_toRightOf="@id/shop_category"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/sports_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_sports_category"
+            android:contentDescription="@string/sports_category_label"
+            app:layout_constraintRight_toLeftOf="@id/transport_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/restaurants_category"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/transport_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_transport_category"
+            android:contentDescription="@string/transport_category_label"
+            app:layout_constraintRight_toLeftOf="@id/travel_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/services_category"
+            app:layout_constraintLeft_toRightOf="@id/sports_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+        <Button
+            android:id="@+id/travel_category"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="onExpenseCategoryClick"
+            android:background="@drawable/ic_travel_category"
+            android:contentDescription="@string/travel_category_label"
+            app:layout_constraintRight_toLeftOf="@id/spiritual_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_category"
+            app:layout_constraintLeft_toRightOf="@id/transport_category"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".15"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <TextView
+            android:id="@+id/auto_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/auto_category"
+            app:layout_constraintStart_toStartOf="@+id/auto_category"
+            app:layout_constraintTop_toBottomOf="@+id/auto_category" />
+
+        <TextView
+            android:id="@+id/beauty_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beauty_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/beauty_category"
+            app:layout_constraintStart_toStartOf="@+id/beauty_category"
+            app:layout_constraintTop_toBottomOf="@+id/beauty_category" />
+
+        <TextView
+            android:id="@+id/clothing_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clothing_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/clothing_category"
+            app:layout_constraintStart_toStartOf="@+id/clothing_category"
+            app:layout_constraintTop_toBottomOf="@+id/clothing_category" />
+
+        <TextView
+            android:id="@+id/entertainment_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entertainment_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/entertainment_category"
+            app:layout_constraintStart_toStartOf="@+id/entertainment_category"
+            app:layout_constraintTop_toBottomOf="@+id/entertainment_category" />
+
+        <TextView
+            android:id="@+id/financial_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/financial_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/financial_category"
+            app:layout_constraintStart_toStartOf="@+id/financial_category"
+            app:layout_constraintTop_toBottomOf="@+id/financial_category" />
+
+        <TextView
+            android:id="@+id/general_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/general_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/general_category"
+            app:layout_constraintStart_toStartOf="@+id/general_category"
+            app:layout_constraintTop_toBottomOf="@+id/general_category" />
+
+        <TextView
+            android:id="@+id/groceries_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/groceries_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/groceries_category"
+            app:layout_constraintStart_toStartOf="@+id/groceries_category"
+            app:layout_constraintTop_toBottomOf="@+id/groceries_category" />
+
+        <TextView
+            android:id="@+id/home_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/home_category"
+            app:layout_constraintStart_toStartOf="@+id/home_category"
+            app:layout_constraintTop_toBottomOf="@+id/home_category" />
+
+        <TextView
+            android:id="@+id/industry_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/industry_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/industry_category"
+            app:layout_constraintStart_toStartOf="@+id/industry_category"
+            app:layout_constraintTop_toBottomOf="@+id/industry_category" />
+
+        <TextView
+            android:id="@+id/learning_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/learning_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/learning_category"
+            app:layout_constraintStart_toStartOf="@+id/learning_category"
+            app:layout_constraintTop_toBottomOf="@+id/learning_category" />
+
+        <TextView
+            android:id="@+id/medical_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medical_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/medical_category"
+            app:layout_constraintStart_toStartOf="@+id/medical_category"
+            app:layout_constraintTop_toBottomOf="@+id/medical_category" />
+
+        <TextView
+            android:id="@+id/nightlife_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nightlife_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/nightlife_category"
+            app:layout_constraintStart_toStartOf="@+id/nightlife_category"
+            app:layout_constraintTop_toBottomOf="@+id/nightlife_category" />
+
+        <TextView
+            android:id="@+id/restaurants_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurants_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/restaurants_category"
+            app:layout_constraintStart_toStartOf="@+id/restaurants_category"
+            app:layout_constraintTop_toBottomOf="@+id/restaurants_category" />
+
+        <TextView
+            android:id="@+id/services_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/services_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/services_category"
+            app:layout_constraintStart_toStartOf="@+id/services_category"
+            app:layout_constraintTop_toBottomOf="@+id/services_category" />
+
+        <TextView
+            android:id="@+id/shop_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shop_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/shop_category"
+            app:layout_constraintStart_toStartOf="@+id/shop_category"
+            app:layout_constraintTop_toBottomOf="@+id/shop_category" />
+
+        <TextView
+            android:id="@+id/spiritual_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spiritual_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/spiritual_category"
+            app:layout_constraintStart_toStartOf="@+id/spiritual_category"
+            app:layout_constraintTop_toBottomOf="@+id/spiritual_category" />
+
+        <TextView
+            android:id="@+id/sports_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sports_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/sports_category"
+            app:layout_constraintStart_toStartOf="@+id/sports_category"
+            app:layout_constraintTop_toBottomOf="@+id/sports_category" />
+        <TextView
+            android:id="@+id/transport_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transport_category_label"
+            app:layout_constraintEnd_toEndOf="@id/transport_category"
+            app:layout_constraintStart_toStartOf="@id/transport_category"
+            app:layout_constraintTop_toBottomOf="@+id/transport_category" />
+
+        <TextView
+            android:id="@+id/travel_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/travel_category_label"
+            app:layout_constraintEnd_toEndOf="@+id/travel_category"
+            app:layout_constraintStart_toStartOf="@+id/travel_category"
+            app:layout_constraintTop_toBottomOf="@+id/travel_category" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
