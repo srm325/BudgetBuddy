@@ -67,4 +67,6 @@
     <string name="next_text">next</string>
     <string name="prev_text">previous</string>
     <string name="takecontrol">Take control of your budget!</string>
+    <string name="housing">Housing</string>
+    <string name="budget">Budget:</string>
 </resources>

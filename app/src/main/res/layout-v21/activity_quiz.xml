@@ -41,7 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:background="#4CAF50"
+            android:background="#FFFFFF"
+            android:backgroundTint="#DFD2D1"
             android:text="@string/true_text"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -52,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:background="#F44336"
+            android:backgroundTint="#DFD2D1"
             android:text="@string/false_text"
             android:textSize="24sp"
             android:textStyle="bold" />
