@@ -31,12 +31,13 @@ android {
 repositories {
     maven { url 'https://jitpack.io' }
 }
+apply plugin: 'com.android.application'
 dependencies {
-
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.gms:play-services-vision:20.1.2'
     implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
     implementation 'androidx.multidex:multidex:2.0.1'
@@ -48,6 +49,38 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     testImplementation 'junit:junit:4.+'
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
+    //material components
+    def material_version = "1.1.0"
+    implementation "com.google.android.material:material:$material_version"
+    //google authentication
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
+//firebase
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    //cloud storage
+    implementation 'com.google.firebase:firebase-storage'
+
+    //cloud firestore
+    implementation 'com.google.firebase:firebase-firestore'
+
+    //circular imageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // timber logs
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // Also declare the dependency for the Google Play services library and specify its version
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
     implementation 'io.radar:sdk:3.0.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     implementation 'com.opencsv:opencsv:4.6'

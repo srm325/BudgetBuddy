@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/logout_action_mainact"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/add_action"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/quiz_action_mainact"
         android:icon="@drawable/ic_learning"
         android:title="@string/add_action"

@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.quiz_action_mainact:
                 startActivity(new Intent(MainActivity.this, QuizActivity.class));
                 return true;
+            case R.id.logout_action_mainact:
+                startActivity(new Intent(MainActivity.this, Login.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
