@@ -4,11 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FFFFFF"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".QuizActivity">
+    tools:context=".QuizActivity"
+    android:background="@drawable/background">
 
     <!--ImageView used for showing pictures along with questions-->
     <ImageView
@@ -20,12 +20,14 @@
     <!--TextView used for showing questions on screen-->
     <TextView
         android:id="@+id/answer_text_view"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfairdisplay"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="@string/a"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textSize="24sp" />
 
     <!--Using another LinearLayout for showing buttons
         in horizontal orientation-->
@@ -36,22 +38,24 @@
         <!--TrueButton-->
         <Button
             android:id="@+id/true_button"
-            android:layout_marginRight="20dp"
-            android:backgroundTint="#5BD91B"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="@string/true_text" />
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#DFD2D1"
+            android:text="@string/true_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <!--FalseButton-->
         <Button
             android:id="@+id/false_button"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
-            android:backgroundTint="#E33328"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="@string/false_text" />
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#DFD2D1"
+            android:text="@string/false_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
