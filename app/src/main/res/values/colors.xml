@@ -10,9 +10,9 @@
     <color name="dark_blue">#18164E</color>
     <item name="transparent" type="color">#00FFFFFF</item>
     <color name="dark_blue_2">#100E37</color>
-    <color name="blue">#292672</color>
+    <color name="blue">#4aaee3</color>
     <color name="purple">#B034FE</color>
-    <color name="light_blue">#36307C</color>
+    <color name="light_blue">#7cd0ef</color>
     <color name="main_fab">#B034FE</color>
     <color name="search_fab">#F1933E</color>
     <color name="scan_fab">#EC6291</color>
