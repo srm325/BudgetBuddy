@@ -49,4 +49,20 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    
+     <!--  Quiz Questions  -->
+    <string name="correct"><b>SCORE IS</b> \n
+                           <b>%1$d</b> OUT OF 6</string>
+    <string name="true_text">true</string>
+    <string name="false_text">false</string>
+    <string name="correct_answer">That\'s correct</string>
+    <string name="wrong_answer">That\'s incorrect</string>
+    <string name="a">A major reason for financial planning is to prevent careless spending</string>
+    <string name="b">Learning the language of money is not important because you will depend on financial planners</string>
+    <string name="c">Receipts and documents showing income and expenses should be kept in a safe place in case of an audit</string>
+    <string name="d">The two elements to consider in budgeting and planning are your income and your expenses</string>
+    <string name="e">Before you prepare a budget, it is a good idea to keep track of your income and expenses for a month or two</string>
+
+    <string name="next_text">next</string>
+    <string name="prev_text">previous</string>
 </resources>
