@@ -14,6 +14,44 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
+    class Question{
+        // stores question 
+        private int answerResId;
+
+        // stores correct answer 
+        private boolean answerTrue;
+
+        public Question(int answerResId, boolean answerTrue)
+        {
+            // setting values to parameters
+            this.answerResId = answerResId;
+            this.answerTrue = answerTrue;
+        }
+
+        // getter to return question
+        public int getAnswerResId()
+        {
+            return answerResId;
+        }
+
+        // setting the question passed 
+        public void setAnswerResId(int answerResId)
+        {
+            this.answerResId = answerResId;
+        }
+
+        // method to return correct answer for question 
+        public boolean isAnswerTrue()
+        {
+            return answerTrue;
+        }
+
+        // setter method for question answer
+        public void setAnswerTrue(boolean answerTrue)
+        {
+            this.answerTrue = answerTrue;
+        }
+    }
     // declare variable for buttons 
     private Button falseButton;
     private Button trueButton;
