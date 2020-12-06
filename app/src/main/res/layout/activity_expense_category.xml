@@ -12,6 +12,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:textSize="20sp"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:layout_height="wrap_content"
         android:text="Choose Expense Category" />
@@ -53,6 +54,7 @@
             android:id="@+id/clothing_category"
             android:layout_width="0dp"
             android:layout_height="0dp"
+
             android:background="@drawable/ic_clothing_category"
             android:onClick="onExpenseCategoryClick"
             android:contentDescription="@string/clothing_category_label"

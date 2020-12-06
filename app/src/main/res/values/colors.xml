@@ -5,8 +5,8 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#d3d3d3</color>
+    <color name="black">#000000</color>
+    <color name="white">#87abbf</color>
     <color name="dark_blue">#18164E</color>
     <item name="transparent" type="color">#00FFFFFF</item>
     <color name="dark_blue_2">#100E37</color>
@@ -17,7 +17,7 @@
     <color name="search_fab">#F1933E</color>
     <color name="scan_fab">#EC6291</color>
     <color name="add_fab">#5B91F4</color>
-    <color name="light_purple">#dddddd</color>
+    <color name="light_purple">#000000</color>
     <color name="dark_text">#323232</color>
     <color name="progress">#34AAA7</color>
     <color name="progresss">#285C5B</color>
