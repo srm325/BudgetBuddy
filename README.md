@@ -1,1 +1,1 @@
-# BudgetShop
+# BudgetBuddy
