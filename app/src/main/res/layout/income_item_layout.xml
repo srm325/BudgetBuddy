@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="4dp">
-            android:textColor="#767676"
 
             <ImageView
                 android:id="@+id/inc_category_img"
@@ -29,6 +28,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/black"
                 android:layout_marginBottom="8dp">
 
                 <TextView
@@ -37,6 +37,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="17dp"
+                    android:textColor="@color/black"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -51,6 +52,7 @@
                     android:layout_marginRight="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:textSize="12sp"
+                    android:textColor="@color/black"
                     android:text="House" />
 
                 <TextView
@@ -61,6 +63,7 @@
                     android:layout_marginLeft="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginRight="20dp"
+                    android:textColor="@color/black"
                     app:layout_constraintRight_toRightOf="parent"
                     android:text="House" />
 
