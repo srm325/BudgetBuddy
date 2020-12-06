@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".QuizActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".QuizActivity">
 
     <!--ImageView used for showing pictures along with questions-->
     <ImageView
@@ -40,7 +40,7 @@
             android:id="@+id/true_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:background="#4CAF50"
             android:text="@string/true_text"
             android:textSize="24sp"
@@ -51,7 +51,7 @@
             android:id="@+id/false_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:background="#F44336"
             android:text="@string/false_text"
             android:textSize="24sp"

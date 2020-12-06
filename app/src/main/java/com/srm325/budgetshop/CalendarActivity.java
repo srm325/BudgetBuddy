@@ -73,8 +73,10 @@ public class CalendarActivity extends AppCompatActivity {
                 bundle.putInt("day", year);
                 //Add the bundle to the intent
                 i.putExtras(bundle);
-                //Fire that second activity
-                startActivity(i);
+                if (day == 5) {
+                    //Fire that second activity
+                    startActivity(i);
+                }
 
             }
         });
