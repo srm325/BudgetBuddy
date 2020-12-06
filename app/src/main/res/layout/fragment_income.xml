@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:paddingBottom="20dp"
+        android:textColor="#767676"
         tools:listitem="@layout/income_item_layout"/>
 
 </FrameLayout>

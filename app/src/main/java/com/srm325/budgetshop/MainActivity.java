@@ -97,13 +97,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.expense_tabbutton:
                 selected = new ExpenseFragment();
                 view.setBackground(getResources().getDrawable(R.drawable.tab_line));
-                incomeButton.setBackground(getResources().getDrawable(android.R.color.transparent));
+                incomeButton.setBackground(getResources().getDrawable(android.R.color.white));
                 getCategoriesListThenSetupRingChart(true);
                 break;
             case R.id.income_tabbutton:
                 selected = new IncomeFragment();
                 view.setBackground(getResources().getDrawable(R.drawable.tab_line));
-                expenseButton.setBackground(getResources().getDrawable(android.R.color.transparent));
+                expenseButton.setBackground(getResources().getDrawable(android.R.color.white));
                 getCategoriesListThenSetupRingChart(false);
                 break;
         }

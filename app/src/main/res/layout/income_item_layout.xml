@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="4dp">
+            android:textColor="#767676"
 
             <ImageView
                 android:id="@+id/inc_category_img"
