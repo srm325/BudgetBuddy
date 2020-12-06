@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--Using linear layout with vertical orientation and center gravity -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#FFFFFF"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".QuizActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--ImageView used for showing pictures along with questions-->
+    <ImageView
+        android:id="@+id/myimage"
+        android:layout_width="wrap_content"
+        android:src="@drawable/f1"
+        android:layout_height="wrap_content"/>
+
+    <!--TextView used for showing questions on screen-->
+    <TextView
+        android:id="@+id/answer_text_view"
+        android:text="@string/a"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--Using another LinearLayout for showing buttons
+        in horizontal orientation-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--TrueButton-->
+        <Button
+            android:id="@+id/true_button"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#5BD91B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/true_text" />
+
+        <!--FalseButton-->
+        <Button
+            android:id="@+id/false_button"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:backgroundTint="#E33328"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/false_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--PreviousButton-->
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_18"
+            android:backgroundTint="#DFD2D1"
+            android:text="@string/prev_text" />
+
+        <!--NextButton-->
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DFD2D1"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_18"
+            android:text="@string/next_text" />
+
+    </LinearLayout>
+</LinearLayout>
